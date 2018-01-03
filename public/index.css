@@ -1,0 +1,333 @@
+.logo_trans{
+  width: 600px;
+  margin-left: calc( 50% - 310px );
+  margin-top: calc( 50vh - 300px );
+  position: absolute;
+  z-index: -1;
+}
+body{
+  background-color: #252538;
+  overflow-x: hidden;
+}
+.cont-1{
+  background-image: url(/public/image/background-01.png);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.cont-2{
+  background-image: url(/public/image/background-1-01.png);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+
+}
+
+.overview_content{
+  margin-left: calc( 50vw - 80px );
+    margin-right: 250px;
+    color: white;
+    text-shadow: 0px 0px 117px rgba(0, 0, 0, 1);
+    margin-top: 30px;
+}
+
+.demo_title{
+  background: linear-gradient(to right, #2d4f8a 0%,#62e4f3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 69px;
+font-weight: 300;
+line-height: 210px;
+}
+
+.select_city{
+  width: calc( 100% - 400px );
+    margin-left: 200px;
+    position: absolute;
+}
+
+.result_title{
+  font-size: 30px;
+margin-left: 60px;
+margin-top: 70px;
+line-height: 10px;
+}
+
+.result_info{
+  margin-left: 60px;
+font-size: 20px;
+color: blue;
+margin-top: 60px;
+
+}
+
+.result_tag{
+  font-size: 15px;
+    background-color: #F2F2F2;
+    color: black;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+}
+
+.search_result{
+  height: calc( 65vh - 210px );
+    margin-top: 12.5vh;
+  width: 100vw;
+  display: none;
+  white-space: nowrap; /*Prevents Wrapping*/
+  -webkit-transition: all 0.5s; /* Safari */
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+
+}
+
+.prev_element{
+  font-size: 60px;
+    font-weight: 300;
+    color: gray;
+    opacity: 0.5;
+    float: left;
+    margin-top: calc( 32.5vh - 155px );
+    transform: translate(-45px,0);
+    cursor: pointer;
+    display: none;
+}
+
+.next_element{
+  font-size: 60px;
+    font-weight: 300;
+    color: gray;
+    opacity: 0.5;
+    float: right;
+    margin-top: calc( 32.5vh - 155px );
+    transform: translate(45px,0);
+    cursor: pointer;
+    display: none;
+}
+
+.next_element.active{
+  display: block;
+}
+
+.prev_element.active{
+  display: block;
+}
+
+.prev_element:hover{
+  opacity: 1;
+}
+.next_element:hover{
+  opacity: 1;
+}
+
+.prev_element.disable{
+  cursor: auto;
+    user-select: none;
+}
+
+.next_element.disable{
+  cursor: auto;
+    user-select: none;
+}
+
+.prev_element.disable:hover{
+  opacity: 0.5;
+  cursor: auto;
+    user-select: none;
+}
+
+.next_element.disable:hover{
+  opacity: 0.5;
+  cursor: auto;
+    user-select: none;
+}
+
+.result_element{
+  height: 100%;
+  width: 80vw;
+  margin-left: 5vw;
+  border-radius: 30px;
+  background-color: white;
+  display: inline-block; /*Display inline and maintain block characteristics.*/
+  vertical-align: top; /*Makes sure all the divs are correctly aligned.*/
+  white-space: normal; /*Prevents child elements from inheriting nowrap.*/
+      text-align: left;
+}
+
+.result_element.first{
+  margin-left: 10vw;
+}
+
+.select_region{
+  width: calc( 100% - 400px );
+    margin-left: 200px;
+    display: none;
+    text-align: center;
+font-size: 20px;
+line-height: 100px;
+position: absolute;
+
+}
+
+.select_region td{
+  padding: 0;
+  cursor: pointer;
+}
+
+.select_region td font:hover{
+  color: #327573;
+}
+
+.select_city td{
+  padding: 0;
+padding-top: 10px;
+padding-bottom: 10px;
+cursor: pointer;
+}
+
+.live-demo{
+  z-index: 200;
+position: absolute;
+background-color: #EFEFEF;
+width: 100vw;
+height: 100vh;
+text-align: center;
+}
+
+.overview_div.no2{
+  display: none;
+}
+
+.overview{
+  font-size: 30px!important;
+  margin-left: calc( 50vw - 80px );
+}
+
+.next_btn{
+  float: right;
+margin-right: 250px;
+margin-top: 30px;
+font-size: 20px;
+background-color: transparent;
+color: white;
+border: 0px;
+user-select: none;
+outline: none;
+padding: 10px;
+padding-right: 15px;
+padding-left: 15px;
+border-radius: 100px;
+}
+
+.next_btn:hover{
+  background-color: rgba(255,255,255,0.3);
+
+}
+
+.overview_div{
+  top: calc( 50vh - 70px );
+  position: absolute;
+  opacity: 0;
+  width: 100vw;
+}
+
+.prev-img{
+  width: 300px;
+  position: fixed;
+  margin-left: calc( 50% - 450px );
+  margin-top: calc( 50vh - 270px );
+  -webkit-box-shadow: 0px 0px 98px 2px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 0px 98px 2px rgba(0,0,0,0.46);
+    box-shadow: 0px 0px 98px 2px rgba(0,0,0,0.46);
+        z-index: 100;
+}
+
+.title{
+  color: #327573;
+    background-color: white;
+    font-size: 69px;
+    font-weight: 300;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 100%;
+}
+
+.result_img{
+  margin-left: calc( 80vw - 90px - 200px );
+width: 200px;
+position: absolute;
+margin-top: 70px;
+}
+
+.result_des{
+  margin-left: 60px;
+margin-top: 30px;
+}
+
+.sub-title{
+  font-size: 25px;
+font-weight: 300;
+background: #2d4f8a;
+background: -moz-linear-gradient(left, #2d4f8a 0%, #62e4f3 100%);
+background: -webkit-linear-gradient(left, #2d4f8a 0%,#62e4f3 100%);
+background: linear-gradient(to right, #2d4f8a 0%,#62e4f3 100%);
+padding: 3px;
+padding-left: 8px;
+padding-right: 8px;
+color: white;
+line-height: 50px;
+margin-right: 100%;
+}
+
+.description{
+  font-size: 20px;
+    font-weight: 300;
+    color: #7285A3;
+    line-height: 100px;
+    margin-right: 100%;
+}
+
+.try{
+  font-size: 20px;
+padding: 10px;
+padding-left: 20px;
+padding-right: 20px;
+background-color: transparent;
+border-width: 3px;
+border-style: solid;
+border-image: linear-gradient(to right, #2d4f8a 0%,#62e4f3 100%);
+border-image-slice: 1;
+background: linear-gradient(to right, #2d4f8a 0%,#62e4f3 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.try:hover{
+  -webkit-background-clip: unset;
+  color: white;
+  -webkit-text-fill-color: white;
+  font-weight: 300;
+}
+
+.title.sec{
+  margin-left: 100px;
+}
+
+.header_title{
+  margin-left: calc( 50% + 60px );
+  z-index: 10;
+  margin-top: calc( 50vh - 140px );
+  position: absolute;
+}
+
+.bold{
+  font-weight: 400;
+}

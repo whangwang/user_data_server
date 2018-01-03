@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <% include ../partials/head %>
+
+    <body>
+
+        <% include ../partials/nav %>
+
+        <!-- content for about page -->
+        <div class="container" id="about">
+            <% for(var i = 0; i < reg_code.length; i++){
+              if(reg_code[i]!=null){
+              %>
+              id: <%= i %> city: <%= reg_code[i].name %><br>
+            <% }} %>
+        </div><!-- end of content -->
+
+        <% include ../partials/footer %>
+
+        <% include ../partials/scripts %>
+
+    </body>
+</html>
