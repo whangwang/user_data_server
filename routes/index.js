@@ -61,6 +61,14 @@ module.exports = function(app) {
               }]
             });
           }
+          var rtn = {
+            "msg": "success",
+            "id": id,
+            "data": user_data
+          }
+          res.send({
+            rtn: rtn
+          });
         }else{
           cid = JSON.parse(data).cid;
           sid = JSON.parse(data).sid;
@@ -90,7 +98,7 @@ module.exports = function(app) {
             "id": id,
             "data": user_data
           }
-          res.json({
+          res.send({
             rtn: rtn
           });
         }
