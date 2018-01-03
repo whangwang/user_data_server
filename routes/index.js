@@ -85,6 +85,14 @@ module.exports = function(app) {
               }]
             });
           }
+          var rtn = {
+            "msg": "success",
+            "id": id,
+            "data": user_data
+          }
+          res.json({
+            rtn: rtn
+          });
         }
 
       });
