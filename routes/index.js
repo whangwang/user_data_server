@@ -35,6 +35,7 @@ module.exports = function(app) {
 
     app.post('/set_data', function(req, res) {
       req.on('data', function (data) {
+        console.log(data);
         var id = JSON.parse(data).id;
         var type = JSON.parse(data).type;
         var cid;
