@@ -28,7 +28,7 @@ module.exports = function(app) {
           "id": req.params.user_id,
           "data": user_data
         }
-        res.render('pages/index',{
+        res.json({
           rtn: rtn
         });
     });
