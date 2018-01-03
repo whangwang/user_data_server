@@ -33,11 +33,60 @@ module.exports = function(app) {
         });
     });
 
-    app.post('/set_data/:user_id', function(req, res) {
-        var rtn;
-        res.render('pages/index',{
-          rtn: rtn
-        });
+    app.post('/set_data/', function(req, res) {
+      req.on('data', function (data) {
+        var id = JSON.parse(data).id;
+        var type = JSON.parse(data).type;
+        var cid;
+        var sid;
+        if(String(type)=="city"){
+          cid = JSON.parse(data).cid;
+          var find = 0;
+          for(var i = 0; i < user_data.length; i++){
+            if(String(user_data[i].id)==String(id)){
+              user_data[i].notify.push({
+                type: type,
+                cid: cid
+              });
+              find++;
+            }
+          }
+          if(find==0){
+            user_data.push({
+              id: String(id),
+              notify: [{
+                type: type,
+                cid: cid
+              }]
+            });
+          }
+        }else{
+          cid = JSON.parse(data).cid;
+          sid = JSON.parse(data).sid;
+          var find = 0;
+          for(var i = 0; i < user_data.length; i++){
+            if(String(user_data[i].id)==String(id)){
+              user_data[i].notify.push({
+                type: type,
+                cid: cid,
+                sid: sid
+              });
+              find++;
+            }
+          }
+          if(find==0){
+            user_data.push({
+              id: String(id),
+              notify: [{
+                type: type,
+                cid: cid,
+                sid: sid
+              }]
+            });
+          }
+        }
+
+      });
     });
 
     app.get('/about', function(req, res) {
