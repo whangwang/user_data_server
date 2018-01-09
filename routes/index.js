@@ -113,6 +113,7 @@ module.exports = function(app) {
         console.log(data);
         var id = JSON.parse(data).id;
         var type = JSON.parse(data).type;
+        var string = JSON.parse(data).string;
         var cid;
         var sid;
         if(String(type)=="city"){
